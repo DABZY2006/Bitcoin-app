@@ -1,0 +1,98 @@
+:root {
+    --primary-color: #0a2b4c; /* Deep blue from main app */
+    --secondary-color: #f7931a; /* Bitcoin orange from main app */
+    --text-light-color: #ffffff;
+    --border-radius: 8px;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Hide scrollbars */
+    padding: 1rem; /* Add some padding for smaller screens */
+    box-sizing: border-box;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+#floating-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+h1 {
+    font-size: 2.2rem; /* Adjusted for mobile */
+    color: var(--secondary-color);
+    margin-bottom: 20px; /* Increased margin for better spacing with two lines */
+    line-height: 1.3; /* Adjust line height for multi-line h1 */
+}
+
+p {
+    font-size: 1.1rem; /* Adjusted for mobile */
+    margin-bottom: 30px;
+    line-height: 1.5;
+    max-width: 500px; /* Constrain paragraph width for readability */
+}
+
+.enter-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Ensure padding is respected */
+}
+
+.enter-button:hover {
+    background-color: #e6830a; /* Darker orange */
+    transform: translateY(-2px);
+}
+
+/* Further mobile adjustments for very small screens if needed */
+@media (max-width: 360px) {
+    #floating-logo {
+        width: 80px;
+        height: 80px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .enter-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

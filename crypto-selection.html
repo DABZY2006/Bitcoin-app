@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Crypto - BitStak</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="crypto-selection-style.css"> 
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="BitStak Logo" id="logo">
+        <h1>BitStak</h1>
+    </header>
+
+    <main>
+        <section id="crypto-provider-selection">
+            <h2>Select Crypto Wallet/Exchanger</h2>
+            <div class="crypto-options-container">
+                <button class="crypto-option-button" data-crypto="bitcoin" data-name="Bitcoin (BTC)">Bitcoin (BTC)</button>
+                <button class="crypto-option-button" data-crypto="ethereum" data-name="Ethereum (ETH)">Ethereum (ETH)</button>
+                <button class="crypto-option-button" data-crypto="bnb" data-name="BNB (Binance Coin)">BNB (Binance Coin)</button>
+                <button class="crypto-option-button" data-crypto="trustwallet" data-name="Trust Wallet">Trust Wallet (Generic)</button>
+                <button class="crypto-option-button" data-crypto="solana" data-name="Solana (SOL)">Solana (SOL)</button>
+                <button class="crypto-option-button" data-crypto="cardano" data-name="Cardano (ADA)">Cardano (ADA)</button>
+                <button class="crypto-option-button" data-crypto="dogecoin" data-name="Dogecoin (DOGE)">Dogecoin (DOGE)</button>
+                <button class="crypto-option-button" data-crypto="litecoin" data-name="Litecoin (LTC)">Litecoin (LTC)</button>
+                <button class="crypto-option-button" data-crypto="xrp" data-name="Ripple (XRP)">Ripple (XRP)</button>
+                <button class="crypto-option-button" data-crypto="tron" data-name="TRON (TRX)">TRON (TRX)</button>
+                <!-- Add more as needed -->
+            </div>
+        </section>
+        <div style="text-align: center; margin-top: 1.5rem;">
+             <button onclick="window.location.href='withdrawal.html'" class="button back-button">Back to Withdrawal Options</button>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="profile-settings.html" class="nav-item">
+            <img src="asset_name.png" alt="Profile" class="nav-icon">
+            <span>Profile</span>
+        </a>
+        <a href="deposit.html" class="nav-item">
+            <img src="deposit-icon.png" alt="Deposit" class="nav-icon">
+            <span>Deposit</span>
+        </a>
+        <a href="withdrawal.html" class="nav-item active">
+            <img src="withdrawal-icon.png" alt="Withdrawal" class="nav-icon">
+            <span>Withdrawal</span>
+        </a>
+        <a href="profile-settings.html" class="nav-item">
+            <img src="settings-icon.png" alt="Settings" class="nav-icon">
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="crypto-selection.js"></script>
+</body>
+</html>

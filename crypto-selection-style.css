@@ -1,0 +1,93 @@
+/* Reusing variables from style.css */
+:root {
+    --primary-color: #0a2b4c;
+    --secondary-color: #f7931a;
+    --text-light-color: #ffffff;
+    --text-dark-color: #333333;
+    --card-background: #ffffff;
+    --input-border-color: #ced4da;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    padding-bottom: 70px; /* For bottom nav */
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-background);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.crypto-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Slightly reduced gap for more items */
+}
+
+.crypto-option-button {
+    width: 100%;
+    padding: 0.85rem 1rem; /* Adjusted padding */
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: bold;
+    color: var(--primary-color); 
+    background-color: #f9f9f9; 
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left; 
+    display: flex;
+    align-items: center;
+}
+
+.crypto-option-button:hover {
+    background-color: #e9e9e9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    width: auto;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color); 
+    color: var(--text-light-color);
+    font-size: 1rem;
+    margin: 0.5rem auto; 
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #08213b; 
+}
+
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+    .crypto-option-button {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+    body {
+        padding-bottom: 65px; 
+    }
+}

@@ -1,0 +1,204 @@
+/* Reusing variables from style.css */
+:root {
+    --primary-color: #0a2b4c;
+    --secondary-color: #f7931a;
+    --text-light-color: #ffffff;
+    --text-dark-color: #333333;
+    --card-background: #ffffff;
+    --input-border-color: #ced4da;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --error-color: #f44336;
+    --accent-color: #4caf50; /* Green for submit */
+}
+
+body {
+    padding-bottom: 70px; /* For bottom nav */
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-background);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.withdrawal-info-text {
+    font-size: 0.95rem;
+    color: var(--text-dark-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.upload-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.upload-action-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--secondary-color); /* Orange for action buttons */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+.upload-action-button:hover {
+    background-color: #e6830a; /* Darker orange */
+}
+
+#image-preview-area {
+    text-align: center;
+    border: 1px dashed var(--input-border-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: #f9f9f9;
+}
+
+#image-preview-area h3 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+#verification-image-preview {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--input-border-color);
+}
+
+.submit-action-button {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--accent-color); /* Green for submit */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-action-button:hover {
+    background-color: #3e8e41; /* Darker green */
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    min-height: 1.2em; 
+    text-align: center;
+}
+
+.back-button { 
+    width: auto;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    font-size: 1rem;
+    margin: 0.5rem auto; 
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #08213b; 
+}
+
+/* Processing Overlay Styles - similar to register.css */
+.processing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 43, 76, 0.85); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+
+.processing-content {
+    background-color: var(--card-background);
+    color: var(--text-dark-color);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 320px; 
+}
+
+#withdrawal-upload-status-message {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+.status-bitcoin-logo { 
+    width: 60px; 
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+    .upload-action-button {
+        padding: 0.65rem;
+        font-size: 0.95rem;
+    }
+    .submit-action-button {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+    #verification-image-preview {
+        max-height: 200px;
+    }
+    body {
+        padding-bottom: 65px; 
+    }
+}

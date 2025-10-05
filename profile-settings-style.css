@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #0a2b4c;
+    --secondary-color: #f7931a;
+    --text-dark-color: #333333;
+    --text-light-color: #ffffff;
+    --card-background: #ffffff;
+    --input-border-color: #ced4da;
+    --border-radius: 8px;
+    --error-color: #f44336; 
+    --success-color: #4caf50; 
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --danger-color: #f44336; 
+}
+
+/* Reusing body, header, main, section from style.css */
+/* Add padding to body to avoid overlap with bottom nav, similar to style.css */
+body {
+    padding-bottom: 70px; 
+}
+
+/* Profile Details Section */
+#profile-details h2, #inspirational-quotes h2 { 
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0.25rem; 
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    flex-shrink: 0; 
+}
+
+#setting-profile-name,
+#setting-profile-email {
+    color: var(--text-dark-color);
+    text-align: right; 
+    word-break: break-all; 
+}
+
+
+/* Inspirational Quotes Section Styles */
+.quote-container {
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+    margin-top: 0.5rem; 
+    font-style: italic;
+}
+
+.quote-container p {
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-dark-color);
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+.quote-container p:last-child {
+    margin-bottom: 0;
+}
+
+/* Styles for messages, kept for potential future use on this page */
+.error-message, .success-message {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; 
+    min-height: 1.2em; 
+    text-align: center;
+    padding: 0.25rem; 
+}
+.error-message {
+    color: var(--error-color);
+}
+
+.success-message {
+    color: var(--success-color);
+}
+
+/* Logout Button Styles */
+.logout-wrapper {
+    margin-top: 1.5rem; 
+    padding: 0; 
+}
+
+/* Activity Log Link Styles */
+.activity-log-link-wrapper {
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.activity-log-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--primary-color); /* Using primary color, can be changed */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline from <a> if styled as button */
+    display: inline-block; /* Ensure padding and width are respected */
+    text-align: center; /* Center text if <a> */
+}
+
+.activity-log-button:hover {
+    background-color: #08213b; /* Darker shade of primary color */
+}
+
+.logout-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--danger-color); 
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c21f2c; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    section { 
+        padding: 1rem;
+    }
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-label {
+        margin-bottom: 0.35rem;
+    }
+    #setting-profile-name,
+    #setting-profile-email {
+        text-align: left; 
+        width: 100%; 
+    }
+    .quote-container p {
+        font-size: 0.9rem;
+    }
+    .logout-button {
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+     body { 
+        padding-bottom: 65px;
+    }
+}

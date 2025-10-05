@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - BitStak</title>
+    <link rel="stylesheet" href="register-style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <div class="register-container">
+        <img src="logo.png" alt="BitStak Logo" id="header-logo">
+        <h2>Create Your BitStak Account</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirmPassword" required minlength="8">
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit" class="submit-button">CREATE ACCOUNT</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="#" id="login-trigger-link">Log In</a> (Demo)</p>
+    </div>
+
+    <div id="status-overlay" class="processing-overlay" style="display: none;">
+        <div class="processing-content">
+            <p id="status-message">MESSAGE WILL APPEAR HERE</p>
+            <img src="bitcoin-symbol-logo.png" alt="Loading..." id="status-bitcoin-logo">
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

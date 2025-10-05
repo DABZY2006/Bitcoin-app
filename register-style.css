@@ -1,0 +1,180 @@
+:root {
+    --primary-color: #0a2b4c; /* Deep blue from main app */
+    --secondary-color: #f7931a; /* Bitcoin orange from main app */
+    --text-light-color: #ffffff;
+    --text-dark-color: #333333;
+    --error-color: #f44336;
+    --card-background: #ffffff;
+    --input-border-color: #ced4da;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.register-container {
+    background-color: var(--card-background);
+    color: var(--text-dark-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#header-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.register-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: var(--text-dark-color);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(247, 147, 26, 0.25);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background-color: #e6830a; /* Darker orange */
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    min-height: 1.2em; /* Reserve space for error message */
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-dark-color);
+}
+
+.login-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for processing overlay */
+.processing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 43, 76, 0.85); /* Primary color with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* On top of everything */
+    flex-direction: column;
+    padding: 1rem; /* Add padding for smaller screens */
+    box-sizing: border-box;
+}
+
+.processing-content {
+    background-color: var(--card-background);
+    color: var(--text-dark-color);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 320px; /* Max width for the content box */
+}
+
+#status-message {
+    font-size: 1.1rem; /* Adjusted for mobile */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+#status-bitcoin-logo {
+    width: 60px; /* Adjusted for mobile */
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* End of Styles for processing overlay */
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 1.5rem;
+    }
+    .register-container h2 {
+        font-size: 1.5rem;
+    }
+    .form-group input {
+        padding: 0.6rem;
+    }
+    .submit-button {
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+}

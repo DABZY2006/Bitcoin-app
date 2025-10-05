@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitStak - Bitcoin Investment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="BitStak Logo" id="logo">
+        <h1>BitStak</h1>
+    </header>
+
+    <main>
+        <section id="market-info">
+            <h2>Bitcoin (BTC)</h2>
+            <div class="price-display">
+                <span id="btc-price-label">Current Price:</span>
+                <span id="btc-price">$ --.--</span>
+            </div>
+            <div class="price-display">
+                <span id="btc-change-label">24h Change:</span>
+                <span id="btc-change" class="neutral">--%</span>
+            </div>
+            <div id="chart-container">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container" style="height:100%; width:100%;">
+                  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px); width:100%;"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                  {
+                  "symbol": "BINANCE:BTCUSDT",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "1D",
+                  "colorTheme": "light",
+                  "trendLineColor": "rgba(247, 147, 26, 1)",
+                  "underLineColor": "rgba(247, 147, 26, 0.3)",
+                  "underLineBottomColor": "rgba(247, 147, 26, 0)",
+                  "isTransparent": true,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                  </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+        </section>
+
+        <section id="user-profile">
+            <h2>Profile</h2>
+            <div class="profile-info-header">
+                <img src="asset_name.png" alt="User" id="profile-icon">
+                <span id="profile-name-text">User</span>
+            </div>
+            <div class="portfolio-item">
+                <span>USD Balance:</span>
+                <span id="usd-balance">$0.00</span>
+            </div>
+            <div class="portfolio-item">
+                <span>BTC Balance:</span>
+                <span id="btc-balance">0.0000 BTC</span>
+            </div>
+        </section>
+
+        <section id="actions">
+            <div class="action-form">
+                <label for="amount-input">Amount (USD):</label>
+                <input type="number" id="amount-input" placeholder="e.g., 100" value="100">
+            </div>
+            <div class="action-buttons">
+                <button id="buy-btn" class="button">Buy BTC</button>
+                <button id="sell-btn" class="button">Sell BTC</button>
+            </div>
+        </section>
+        
+        <section id="notifications">
+             <p id="notification-message"></p>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="profile-settings.html" class="nav-item">
+            <img src="asset_name.png" alt="Profile" class="nav-icon">
+            <span>Profile</span>
+        </a>
+        <a href="deposit.html" class="nav-item">
+            <img src="deposit-icon.png" alt="Deposit" class="nav-icon">
+            <span>Deposit</span>
+        </a>
+        <a href="withdrawal.html" class="nav-item">
+            <img src="withdrawal-icon.png" alt="Withdrawal" class="nav-icon">
+            <span>Withdrawal</span>
+        </a>
+        <a href="profile-settings.html" class="nav-item">
+            <img src="settings-icon.png" alt="Settings" class="nav-icon">
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <footer>
+        <p>&copy; 2024 BitStak. Invest Responsibly.</p>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "confetti-js": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.module.mjs"
+        }
+    }
+    </script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

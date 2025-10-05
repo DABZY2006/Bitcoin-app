@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw Funds - BitStak</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="withdrawal-style.css"> 
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="BitStak Logo" id="logo">
+        <h1>BitStak</h1>
+    </header>
+
+    <main>
+        <section id="withdrawal-options">
+            <h2>Withdraw Funds</h2>
+            <div class="options-container">
+                <button id="bank-withdraw-btn" class="option-button">Withdraw to Bank Account</button>
+                <button id="crypto-withdraw-btn" class="option-button">Withdraw to Crypto Wallet</button>
+            </div>
+        </section>
+        
+        <section id="withdrawal-notifications">
+             <p id="withdrawal-notification-message"></p>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="profile-settings.html" class="nav-item">
+            <img src="asset_name.png" alt="Profile" class="nav-icon">
+            <span>Profile</span>
+        </a>
+        <a href="deposit.html" class="nav-item">
+            <img src="deposit-icon.png" alt="Deposit" class="nav-icon">
+            <span>Deposit</span>
+        </a>
+        <a href="withdrawal.html" class="nav-item active">
+            <img src="withdrawal-icon.png" alt="Withdrawal" class="nav-icon">
+            <span>Withdrawal</span>
+        </a>
+        <a href="profile-settings.html" class="nav-item">
+            <img src="settings-icon.png" alt="Settings" class="nav-icon">
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="withdrawal.js"></script>
+</body>
+</html>
+

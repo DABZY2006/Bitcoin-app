@@ -1,0 +1,91 @@
+/* Inherits root variables from style.css if style.css is loaded first and defines them globally */
+/* For robustness, you might redefine them or ensure style.css is always linked first. */
+/* Assuming :root variables from style.css are available */
+
+/* Page specific styles for deposit.html */
+body {
+    /* Ensures body styling is consistent if not fully covered by style.css */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-bottom: 70px; /* For bottom nav */
+}
+
+main {
+    /* Ensures main styling is consistent */
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    /* Ensures section styling is consistent */
+    background-color: var(--card-background);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    /* Ensures h2 styling is consistent */
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem; /* More space before buttons */
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between buttons */
+}
+
+.option-button {
+    width: 100%;
+    padding: 0.85rem; /* Slightly more padding */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--secondary-color); /* Bitcoin Orange */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.option-button:hover {
+    background-color: #e6830a; /* Darker orange */
+    transform: translateY(-1px);
+}
+
+#deposit-notifications {
+    text-align: center;
+    padding: 0.5rem;
+    min-height: 2em; 
+    background-color: var(--card-background); /* Consistent with other sections */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+#deposit-notification-message {
+    font-weight: normal; /* Normal weight for this notification */
+    color: var(--primary-color); /* Neutral/info color */
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+    .option-button {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+    body {
+        padding-bottom: 65px; /* Adjust if nav height changes */
+    }
+}

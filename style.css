@@ -1,0 +1,256 @@
+:root {
+    --primary-color: #0a2b4c; /* Deep blue */
+    --secondary-color: #f7931a; /* Bitcoin orange */
+    --accent-color: #4caf50; /* Green for buy/positive */
+    --danger-color: #f44336; /* Red for sell/negative */
+    --background-color: #f0f2f5; /* Light grey background */
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --text-light-color: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 70px; /* Add padding to prevent content being hidden by bottom-nav */
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+#logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-background);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex; 
+    align-items: center; 
+}
+
+.profile-info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; 
+    padding-bottom: 0.5rem; 
+}
+
+#profile-icon {
+    width: 32px; 
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%; 
+}
+
+#profile-name-text {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.price-display, .portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#btc-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+#btc-change.positive {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#btc-change.negative {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+#btc-change.neutral {
+    color: var(--text-color);
+}
+
+#chart-container {
+    height: 280px; /* Increased height for the chart */
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    overflow: hidden; /* Ensures widget respects border-radius */
+}
+
+.action-form {
+    margin-bottom: 1rem;
+}
+
+.action-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#amount-input {
+    width: calc(100% - 22px); 
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 48%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: var(--text-light-color);
+}
+
+#buy-btn {
+    background-color: var(--accent-color);
+}
+
+#buy-btn:hover {
+    background-color: #3e8e41; 
+}
+
+#sell-btn {
+    background-color: var(--danger-color);
+}
+
+#sell-btn:hover {
+    background-color: #c21f2c; 
+}
+
+#notifications {
+    text-align: center;
+    padding: 0.5rem;
+    min-height: 2em; 
+}
+
+#notification-message {
+    font-weight: bold;
+    margin: 0;
+}
+
+footer {
+    display: none; 
+}
+
+/* Bottom Navigation Bar Styles */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    z-index: 100;
+    border-top: 1px solid #e0e0e0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.75rem; /* Smaller text for nav items */
+    padding: 0.25rem 0.5rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-item.active {
+    color: var(--secondary-color); /* Bitcoin orange for active tab */
+}
+
+.nav-item.active .nav-icon {
+    /* Optional: if you want active icon to change color, use SVG or filter */
+}
+
+.nav-icon {
+    width: 24px; /* Standard icon size */
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    #logo {
+        height: 35px;
+    }
+    .button {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+    section {
+        padding: 1rem;
+    }
+    .nav-item {
+        font-size: 0.7rem;
+    }
+    .nav-icon {
+        width: 22px;
+        height: 22px;
+    }
+    body {
+        padding-bottom: 65px; /* Adjust if nav height changes */
+    }
+}

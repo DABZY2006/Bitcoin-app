@@ -1,0 +1,254 @@
+:root {
+    --primary-color: #0a2b4c;
+    --secondary-color: #f7931a;
+    --text-light-color: #ffffff;
+    --text-dark-color: #333333;
+    --card-background: #ffffff;
+    --input-border-color: #ced4da;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --error-color: #f44336;
+    --accent-color: #4caf50; 
+    --cancel-color: #757575; /* A grey for cancel button */
+}
+
+body {
+    padding-bottom: 70px; 
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-background);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem; 
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 0.95rem; 
+    color: var(--text-dark-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.85rem; 
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: var(--text-dark-color);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(247, 147, 26, 0.25);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light-color);
+    background-color: var(--accent-color); 
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; 
+}
+
+.submit-button:hover {
+    background-color: #3e8e41; 
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: -0.75rem; 
+    margin-bottom: 1rem;
+    min-height: 1.2em; 
+    text-align: left;
+}
+.back-button {
+    width: auto;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    font-size: 1rem;
+    margin: 0.5rem auto; 
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #08213b; 
+}
+
+
+.processing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 43, 76, 0.85); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+
+.processing-content {
+    background-color: var(--card-background);
+    color: var(--text-dark-color);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 320px; 
+}
+
+#withdrawal-status-message {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+.status-bitcoin-logo-withdrawal {
+    width: 60px; 
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Confirmation Modal Styles */
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 43, 76, 0.85); /* Primary color with opacity */
+    display: flex; /* Changed by JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Higher than nav, same as processing */
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.confirmation-content {
+    background-color: var(--card-background);
+    color: var(--text-dark-color);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 380px; /* Slightly wider for more text */
+}
+
+#confirmation-message {
+    font-size: 1.1rem;
+    font-weight: normal; /* Normal weight for confirmation text */
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+.confirmation-buttons {
+    display: flex;
+    justify-content: space-around; /* Space out buttons */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.confirmation-buttons .button { /* General styling for modal buttons */
+    width: auto; /* Auto width based on content */
+    min-width: 100px; /* Minimum width */
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+}
+
+.confirmation-proceed-btn {
+    background-color: var(--accent-color); /* Green for proceed */
+    color: var(--text-light-color);
+}
+.confirmation-proceed-btn:hover {
+    background-color: #3e8e41; /* Darker green */
+}
+
+.confirmation-cancel-btn {
+    background-color: var(--cancel-color); /* Grey for cancel */
+    color: var(--text-light-color);
+}
+.confirmation-cancel-btn:hover {
+    background-color: #5e5e5e; /* Darker grey */
+}
+/* End Confirmation Modal Styles */
+
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="number"] {
+        padding: 0.75rem;
+    }
+    .submit-button {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+    body {
+        padding-bottom: 65px; 
+    }
+    .confirmation-content {
+        padding: 1.5rem 1rem;
+    }
+    #confirmation-message {
+        font-size: 1rem;
+    }
+    .confirmation-buttons {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+    .confirmation-buttons .button {
+        width: 100%; /* Full width for stacked buttons */
+    }
+}

@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #0a2b4c;
+    --secondary-color: #f7931a;
+    --text-dark-color: #333333;
+    --text-light-color: #ffffff;
+    --card-background: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --activity-item-border: #e0e0e0;
+}
+
+body {
+    padding-bottom: 70px; /* For bottom nav */
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-background);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#activity-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    background-color: #f9f9f9;
+    border: 1px solid var(--activity-item-border);
+    border-left: 5px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.activity-type {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.activity-timestamp {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.activity-description {
+    font-size: 0.95rem;
+    color: var(--text-dark-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.back-button-activity { /* Re-using .button styling, but specifically named for clarity */
+    width: auto;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    display: inline-block;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button-activity:hover {
+    background-color: #08213b;
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+    .activity-item {
+        padding: 0.75rem;
+    }
+    .activity-type {
+        font-size: 1rem;
+    }
+    .activity-description {
+        font-size: 0.9rem;
+    }
+    body {
+        padding-bottom: 65px;
+    }
+}

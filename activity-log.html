@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log - BitStak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="activity-log-style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="BitStak Logo" id="logo">
+        <h1>BitStak</h1>
+    </header>
+
+    <main>
+        <section id="activity-log-section">
+            <h2>Activity Log</h2>
+            <div id="activity-list-container">
+                <!-- Activity items will be dynamically inserted here -->
+                <p id="no-activities-message" style="display: none; text-align: center; color: var(--text-dark-color);">No activities recorded yet.</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <button onclick="window.location.href='profile-settings.html'" class="button back-button-activity">Back to Profile Settings</button>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="profile-settings.html" class="nav-item active">
+            <img src="asset_name.png" alt="Profile" class="nav-icon">
+            <span>Profile</span>
+        </a>
+        <a href="deposit.html" class="nav-item">
+            <img src="deposit-icon.png" alt="Deposit" class="nav-icon">
+            <span>Deposit</span>
+        </a>
+        <a href="withdrawal.html" class="nav-item">
+            <img src="withdrawal-icon.png" alt="Withdrawal" class="nav-icon">
+            <span>Withdrawal</span>
+        </a>
+        <a href="profile-settings.html" class="nav-item"> 
+            <img src="settings-icon.png" alt="Settings" class="nav-icon">
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="activity-log.js"></script>
+</body>
+</html>
